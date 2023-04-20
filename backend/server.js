@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 // Set up CORS
 const corsOptions = {
-  origin: ['https://chat-frontend-hmm8.onrender.com'],
+  origin: ['http://127.0.0.1:3000', 'http://localhost:3000','https://chat-frontend-hmm8.onrender.com'],
   credentials: true,
   exposedHeaders: ['Access-Control-Allow-Origin'],
 };
@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, 'public')));
 } else {
   const corsOptions = {
-    origin: ['https://chat-frontend-hmm8.onrender.com'],
+    origin: ['http://127.0.0.1:3000', 'http://localhost:3000','https://chat-frontend-hmm8.onrender.com'],
     credentials: true,
     exposedHeaders: ['Access-Control-Allow-Origin'],
   };
@@ -66,7 +66,7 @@ app.get('/**', (req, res) => {
 });
 
 // Start the server
-const port = process.env.PORT || 10000;
+const port = process.env.PORT || 3030;
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
