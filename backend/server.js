@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 // Set up CORS
 const corsOptions = {
-  origin: ['http://127.0.0.1:3000', 'http://localhost:3000', 'https://chat-gpt-az9j.onrender.com'],
+  origin: ['https://chat-frontend-7uwk.onrender.com', 'http://127.0.0.1:3000', 'http://localhost:3000'],
 
   credentials: true,
   exposedHeaders: ['Access-Control-Allow-Origin'],
@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, 'public')));
 } else {
   const corsOptions = {
-    origin: ['http://127.0.0.1:3000', 'http://localhost:3000', 'https://chat-gpt-az9j.onrender.com'],
+    origin: ['https://chat-frontend-7uwk.onrender.com', 'http://127.0.0.1:3000', 'http://localhost:3000'],
 
     credentials: true,
     exposedHeaders: ['Access-Control-Allow-Origin'],
